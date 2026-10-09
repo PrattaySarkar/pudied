@@ -24,6 +24,10 @@ def context(request: Request, **values: object) -> dict[str, object]:
     return {"request": request, "tree": scanner.tree(), **values}
 
 
+def render(template_name: str, request: Request, status_code: int = 200, **values: object):
+    return templates.TemplateResponse(request=request, name=template_name, context=context(request, **values), status_code=status_code)
+
+
 @app.on_event("startup")
 def startup() -> None:
     scanner.get(force=True)
@@ -33,7 +37,7 @@ def startup() -> None:
 def home(request: Request):
     result = scanner.get()
     recent = sorted(result.articles, key=lambda r: (r.article.updated_at or r.article.created_at or "", r.article.title), reverse=True)[:6]
-    return templates.TemplateResponse("home.html", context(request, recent=recent, errors=result.errors))
+    return render("home.html", request, recent=recent, errors=result.errors)
 
 
 @app.get("/article/{article_id}", response_class=HTMLResponse)
@@ -44,9 +48,9 @@ def article_page(request: Request, article_id: str):
         result = scanner.get(force=True)
         record = result.records.get(article_id)
     if record is None:
-        return templates.TemplateResponse("404.html", {"request": request, "message": "That entry is not in the current index."}, status_code=404)
+        return render("404.html", request, status_code=404, message="That entry is not in the current index.")
     related = [result.records[r] for r in record.article.related_articles if r in result.records]
-    return templates.TemplateResponse("article.html", context(request, record=record, related=related))
+    return render("article.html", request, record=record, related=related)
 
 
 @app.get("/category/{category_path:path}", response_class=HTMLResponse)
@@ -56,24 +60,24 @@ def category_page(request: Request, category_path: str):
         raise HTTPException(status_code=400, detail="Invalid category path")
     node = scanner.category(parts)
     if node is None:
-        return templates.TemplateResponse("404.html", {"request": request, "message": "That category is not in the current tree."}, status_code=404)
-    return templates.TemplateResponse("category.html", context(request, node=node, parts=parts))
+        return render("404.html", request, status_code=404, message="That category is not in the current tree.")
+    return render("category.html", request, node=node, parts=parts)
 
 
 @app.get("/tree", response_class=HTMLResponse)
 def tree_page(request: Request):
-    return templates.TemplateResponse("tree.html", context(request))
+    return render("tree.html", request)
 
 
 @app.get("/search", response_class=HTMLResponse)
 def search_page(request: Request, q: str = Query(default="")):
     matches = search(scanner.get().articles, q)
-    return templates.TemplateResponse("search.html", context(request, q=q, matches=matches))
+    return render("search.html", request, q=q, matches=matches)
 
 
 @app.get("/index", response_class=HTMLResponse)
 def index_page(request: Request):
-    return templates.TemplateResponse("index.html", context(request, records=scanner.get().articles))
+    return render("index.html", request, records=scanner.get().articles)
 
 
 @app.get("/api/tree")
