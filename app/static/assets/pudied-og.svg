@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PUDIED — Prattay's Urban Dictionary of Interesting Engineering Decisions</title>
+  <desc id="desc">Useful knowledge. Questionable methods.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d0f0e"/><stop offset="1" stop-color="#1b211d"/></linearGradient>
+    <radialGradient id="glow" cx="82%" cy="18%" r="70%"><stop stop-color="#b7f34b" stop-opacity=".28"/><stop offset="1" stop-color="#b7f34b" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <path d="M70 532h1060" stroke="#b7f34b" stroke-opacity=".6" stroke-width="3"/>
+  <text x="72" y="122" fill="#b7f34b" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="8">PUDIED</text>
+  <text x="72" y="282" fill="#f4f7f1" font-family="Arial, sans-serif" font-size="78" font-weight="700">Useful knowledge.</text>
+  <text x="72" y="372" fill="#b7f34b" font-family="Arial, sans-serif" font-size="78" font-weight="700">Questionable methods.</text>
+  <text x="72" y="475" fill="#95a198" font-family="Arial, sans-serif" font-size="25">Prattay's Urban Dictionary of Interesting Engineering Decisions</text>
+  <text x="1060" y="558" fill="#95a198" font-family="Arial, sans-serif" font-size="20" text-anchor="end">pudied.onrender.com</text>
+</svg>
