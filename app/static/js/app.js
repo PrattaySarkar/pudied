@@ -1,0 +1,1 @@
+document.addEventListener('input', event => { const input = event.target.closest('[data-tree-filter]'); if (!input) return; const query = input.value.toLowerCase(); document.querySelectorAll('[data-tree] .tree-node, [data-tree] .tree-article').forEach(node => { node.hidden = query && !node.textContent.toLowerCase().includes(query); }); });
