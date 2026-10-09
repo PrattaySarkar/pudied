@@ -38,8 +38,8 @@ def context(request: Request, **values: object) -> dict[str, object]:
     elif path and path[0] == "category":
         node = scanner.category(current_category)
         if node:
-            social_title = f"{node.name} — PUDIED"
-            social_description = f"Browse {node.article_count} PUDIED entries in {node.name}: improvised engineering techniques, useful concepts, and technical folklore."
+            social_title = f"{node['name']} — PUDIED"
+            social_description = f"Browse {node['article_count']} PUDIED entries in {node['name']}: improvised engineering techniques, useful concepts, and technical folklore."
     elif path and path[0] == "search":
         query = str(values.get("q") or request.query_params.get("q", "")).strip()
         if query:
