@@ -37,3 +37,7 @@ pytest -q
 Create a GitHub repository, push this project, and connect it to a Render Web Service. `render.yaml` supplies the build command, production ASGI start command, and `/health` check. A normal Render service packages the JSON files from the deployed commit. Its filesystem is generally ephemeral: files created directly on a running instance can be discovered live, but may disappear after restart or redeploy. A GitHub commit changes the live service only after Render deploys it (unless you add a separate, explicitly configured synchronization workflow).
 
 No article registry is maintained: the filesystem scanner is the source of truth.
+
+## Article submissions
+
+The live site includes `/submit`. It collects an idea in the browser and opens a pre-filled GitHub Issue in this repository for editorial review. This is intentionally free and requires no email provider, database, or Render storage. Since the repository is public, submissions are public GitHub issues; do not submit private information. After review, copy the approved idea into a normal JSON file under `data/`, then deploy that content change.

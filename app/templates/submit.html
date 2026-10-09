@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Submit an article — PUDIED{% endblock %}
+{% block content %}
+<div class="submit-page">
+  <p class="eyebrow">Send a decision for review</p>
+  <h1>Submit an<br><em>article</em></h1>
+  <p class="lede">Have a phrase, workaround, or suspiciously confident engineering decision? Send it to the editorial workbench. Your submission becomes a private-to-you GitHub draft, where it can be reviewed, polished, and turned into a real JSON entry.</p>
+
+  <form class="submission-form" data-submission-form>
+    <div class="form-intro"><span class="about-number">01</span><strong>Describe the idea</strong><span>Required fields are marked *</span></div>
+    <label>Suggested name *<input name="title" required maxlength="120" placeholder="Cable Mitosis, but for zip ties"></label>
+    <label>Main idea / definition *<textarea name="definition" required maxlength="1600" rows="5" placeholder="What does this decision, technique, or phrase mean?"></textarea></label>
+    <div class="form-two-col">
+      <label>Where does it belong?<input name="category" maxlength="100" placeholder="electronics / general / mecheng"></label>
+      <label>Part of speech<input name="part_of_speech" maxlength="40" placeholder="noun, verb, phenomenon…"></label>
+    </div>
+    <label>Why is it interesting? <span class="label-note">optional</span><textarea name="context" maxlength="1200" rows="3" placeholder="The story, failure mode, or constraint behind it…"></textarea></label>
+    <div class="form-two-col">
+      <label>Aliases <span class="label-note">optional</span><input name="aliases" placeholder="wire mitosis, jumper division"></label>
+      <label>Tags <span class="label-note">optional</span><input name="tags" placeholder="improvisation, electronics"></label>
+    </div>
+    <label>Example sentence <span class="label-note">optional</span><input name="example" maxlength="300" placeholder="We are out of connectors. Apply cable mitosis."></label>
+    <label class="consent-row"><input type="checkbox" name="ready" required> <span>I understand this opens GitHub so I can review the submission before sending it.</span></label>
+    <button class="submit-action" type="submit">Open review draft <span>↗</span></button>
+    <p class="submit-status" data-submit-status role="status" aria-live="polite"></p>
+  </form>
+
+  <aside class="submission-note"><span>✦</span><p><strong>How it reaches Prattay:</strong> GitHub Issues is the free editorial inbox for PUDIED. The draft opens in the repository, so the idea can be discussed, corrected, and converted into a data file only when it is ready. Because the repository is public, submissions should not include private or sensitive information.</p></aside>
+</div>
+{% endblock %}

@@ -52,6 +52,11 @@ def about_page(request: Request):
     return render("about.html", request)
 
 
+@app.get("/submit", response_class=HTMLResponse)
+def submit_page(request: Request):
+    return render("submit.html", request)
+
+
 @app.get("/article/{article_id}", response_class=HTMLResponse)
 def article_page(request: Request, article_id: str):
     result = scanner.get()
