@@ -25,10 +25,43 @@ def context(request: Request, **values: object) -> dict[str, object]:
     path = request.url.path.strip("/").split("/")
     current_article_id = path[1] if len(path) == 2 and path[0] == "article" else None
     current_category = tuple(path[1:]) if path and path[0] == "category" else ()
+    social_title: str | None = None
+    social_type = "website"
+    social_description = "A living engineering dictionary of improvised techniques, technical inside jokes, and decisions that deserve documentation."
     if current_article_id:
         record = scanner.get().records.get(current_article_id)
         current_category = record.category_path if record else ()
-    return {"request": request, "tree": scanner.tree(), "current_category": current_category, "current_article_id": current_article_id, **values}
+        if record:
+            social_type = "article"
+            social_title = f"{record.article.title} — PUDIED"
+            social_description = record.article.definition
+    elif path and path[0] == "category":
+        node = scanner.category(current_category)
+        if node:
+            social_title = f"{node.name} — PUDIED"
+            social_description = f"Browse {node.article_count} PUDIED entries in {node.name}: improvised engineering techniques, useful concepts, and technical folklore."
+    elif path and path[0] == "search":
+        query = str(values.get("q") or request.query_params.get("q", "")).strip()
+        if query:
+            matches = values.get("matches", [])
+            social_title = f"Search: {query} — PUDIED"
+            social_description = f"{len(matches)} PUDIED search results for {query}." if hasattr(matches, "__len__") else f"Search PUDIED for {query}."
+        else:
+            social_title = "Search — PUDIED"
+            social_description = "Search PUDIED articles, definitions, aliases, tags, and examples."
+    elif path and path[0] == "about":
+        social_title = "About PUDIED"
+        social_description = "Learn about PUDIED, a living field guide to engineering improvisation, technical folklore, and decisions worth documenting."
+    elif path and path[0] == "submit":
+        social_title = "Submit an article — PUDIED"
+        social_description = "Share an engineering idea or inside joke for review in the PUDIED editorial inbox."
+    elif path and path[0] == "index":
+        social_title = "Article index — PUDIED"
+        social_description = f"Browse all {len(scanner.get().articles)} JSON-discovered PUDIED articles."
+    elif path and path[0] == "tree":
+        social_title = "Browse the tree — PUDIED"
+        social_description = "Explore PUDIED's live, nested category tree and discover engineering folklore by topic."
+    return {"request": request, "tree": scanner.tree(), "current_category": current_category, "current_article_id": current_article_id, "social_title": social_title, "social_type": social_type, "social_description": social_description, **values}
 
 
 def render(template_name: str, request: Request, status_code: int = 200, **values: object):

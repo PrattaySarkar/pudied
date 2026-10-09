@@ -41,3 +41,7 @@ No article registry is maintained: the filesystem scanner is the source of truth
 ## Article submissions
 
 The live site includes `/submit`. It collects an idea in the browser and opens a pre-filled GitHub Issue in this repository for editorial review. This is intentionally free and requires no email provider, database, or Render storage. Since the repository is public, submissions are public GitHub issues; do not submit private information. After review, copy the approved idea into a normal JSON file under `data/`, then deploy that content change.
+
+## Link previews
+
+All HTML pages share Open Graph and Twitter Card metadata from the base template. Article previews use the JSON article title and definition automatically; category and search previews use their current page context. Adding a JSON article therefore also gives its article URL an appropriate social preview without a per-article template or metadata edit. Social platforms may cache previews, so edits may not appear immediately on links they have already crawled.
