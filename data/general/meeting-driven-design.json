@@ -1,0 +1,14 @@
+{
+  "id": "meeting-driven-design",
+  "title": "Meeting-Driven Design",
+  "aliases": ["Calendar Architecture", "Consensus CAD"],
+  "summary": "A design process in which the calendar becomes the primary design tool.",
+  "part_of_speech": "noun",
+  "tags": ["process", "project-management", "improvisation"],
+  "definition": "The gradual transformation of an engineering problem into a sequence of meetings, action items, and follow-up meetings until the original hardware is mostly remembered as an agenda topic.",
+  "origin": "The Department of Synchronized Nodding",
+  "examples": ["The bracket is still missing, but meeting-driven design has produced an excellent spreadsheet about it."],
+  "related_articles": ["engineering-telepathy", "customer-satisfaction-testing"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

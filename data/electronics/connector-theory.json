@@ -1,0 +1,14 @@
+{
+  "id": "connector-theory",
+  "title": "Connector Theory",
+  "aliases": ["The Last Adapter", "Port Optimism"],
+  "summary": "The study of why the one connector needed for a five-minute test is never in the box.",
+  "part_of_speech": "noun",
+  "tags": ["electronics", "inventory", "hardware"],
+  "definition": "The practical observation that every project contains many connectors, but none that mate with the two parts currently being held by the engineer.",
+  "origin": "The Drawer of Almost-Useful Cables",
+  "examples": ["Connector theory says the adapter is somewhere in the lab, just not in this dimension."],
+  "related_articles": ["cable-mitosis", "constraint-dismissal"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

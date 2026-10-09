@@ -1,0 +1,14 @@
+{
+  "id": "engineering-telepathy",
+  "title": "Engineering Telepathy",
+  "aliases": ["You Know What I Mean", "The Unwritten Spec"],
+  "summary": "The belief that a teammate can infer the missing requirements from a confident nod.",
+  "part_of_speech": "noun",
+  "tags": ["communication", "requirements", "teamwork"],
+  "definition": "The informal protocol in which an engineer omits a requirement because it seems obvious, then is surprised when the finished result reflects a different obvious interpretation.",
+  "origin": "The Meeting That Could Have Been an Email",
+  "examples": ["I did not write the connector orientation down; I assumed engineering telepathy."],
+  "related_articles": ["constraint-dismissal", "meeting-driven-design"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

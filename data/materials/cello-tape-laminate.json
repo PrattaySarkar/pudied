@@ -1,0 +1,14 @@
+{
+  "id": "cello-tape-laminate",
+  "title": "Cello Tape Laminate",
+  "aliases": ["Transparent Composite", "Tape Stack"],
+  "summary": "A layered material system whose primary design parameter is how much tape remains on the roll.",
+  "part_of_speech": "noun",
+  "tags": ["materials", "improvisation", "prototyping"],
+  "definition": "A temporary composite made by layering cello tape until a paper, wire, label, or small component gains enough stiffness to continue the experiment. It is a prototype aid, not a universal structural material.",
+  "origin": "The School of Adhesive Mechanics",
+  "examples": ["The sensor mount achieved cello tape laminate status during the lunch break."],
+  "related_articles": ["temporary-permanent-fixture", "spiral-technique"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

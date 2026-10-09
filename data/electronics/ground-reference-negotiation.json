@@ -1,0 +1,14 @@
+{
+  "id": "ground-reference-negotiation",
+  "title": "Ground Reference Negotiation",
+  "aliases": ["Which Ground?", "Potential Diplomacy"],
+  "summary": "The careful discussion that begins after two circuits disagree about what zero volts means.",
+  "part_of_speech": "noun",
+  "tags": ["electronics", "debugging", "signals"],
+  "definition": "A troubleshooting ceremony in which two circuits, each certain that it has a perfectly good ground, are encouraged to share their reference point before the oscilloscope is blamed.",
+  "origin": "The Embassy of Unconnected Grounds",
+  "examples": ["The sensor was not broken; it was waiting for ground reference negotiation."],
+  "related_articles": ["cable-mitosis", "spiral-technique"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

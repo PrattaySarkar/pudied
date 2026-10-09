@@ -1,0 +1,14 @@
+{
+  "id": "temporary-permanent-fixture",
+  "title": "Temporary-Permanent Fixture",
+  "aliases": ["Temporary Forever", "Prototype Furniture"],
+  "summary": "A fixture that outlives the schedule, the prototype, and occasionally the building.",
+  "part_of_speech": "noun",
+  "tags": ["mecheng", "fixtures", "maintenance"],
+  "definition": "A support, clamp, block, or bracket installed as a short-term aid and retained because removing it would require explaining why it is still necessary.",
+  "origin": "The Workshop of Permanent Temporary Solutions",
+  "examples": ["The wooden block is now a temporary-permanent fixture with its own inspection date."],
+  "related_articles": ["spiral-fixture", "force-fit-calibration"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

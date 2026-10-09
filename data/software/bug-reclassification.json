@@ -1,0 +1,14 @@
+{
+  "id": "bug-reclassification",
+  "title": "Bug Reclassification",
+  "aliases": ["Feature Promotion", "Expected Behavior"],
+  "summary": "The administrative technique of changing a defect's name until it sounds intentional.",
+  "part_of_speech": "noun",
+  "tags": ["software", "product", "debugging"],
+  "definition": "The moment an inconvenient behavior is renamed a feature, an edge case, or a known limitation because fixing it would take longer than updating the issue description.",
+  "origin": "The Office of Productive Vocabulary",
+  "examples": ["The button losing all its data was bug reclassification with impressive confidence."],
+  "related_articles": ["works-on-my-machine", "customer-satisfaction-testing"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

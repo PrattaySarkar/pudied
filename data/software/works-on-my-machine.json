@@ -1,0 +1,14 @@
+{
+  "id": "works-on-my-machine",
+  "title": "Works on My Machine",
+  "aliases": ["Localhost Certification", "Laptop-Grade Reliability"],
+  "summary": "A deployment status based on one successful run in one carefully arranged environment.",
+  "part_of_speech": "phrase",
+  "tags": ["software", "debugging", "deployment"],
+  "definition": "A statement offered when a program behaves correctly on the developer's computer but has not yet been introduced to the unfamiliar ecosystem known as everyone else's computer.",
+  "origin": "The Republic of Localhost",
+  "examples": ["The test passed, the demo passed, and now works on my machine is being promoted to production."],
+  "related_articles": ["bug-reclassification", "engineering-telepathy"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "force-fit-calibration",
+  "title": "Force-Fit Calibration",
+  "aliases": ["Persuasion by Hammer", "Dimensional Negotiation"],
+  "summary": "The measurement method that begins when the component refuses to fit the drawing.",
+  "part_of_speech": "noun",
+  "tags": ["mecheng", "fitting", "workshop"],
+  "definition": "The practice of adjusting an assembly by applying carefully increasing force until the part fits, followed by a confident claim that the result is within tolerance.",
+  "origin": "The Institute of Applied Persuasion",
+  "examples": ["After three taps and one apology, force-fit calibration declared victory."],
+  "related_articles": ["temporary-permanent-fixture", "constraint-dismissal"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}
