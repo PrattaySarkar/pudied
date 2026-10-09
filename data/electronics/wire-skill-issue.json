@@ -1,0 +1,16 @@
+{
+  "id": "wire-skill-issue",
+  "title": "Wire Skill Issue™",
+  "aliases": ["Wire Competence Failure", "Cable Blame"],
+  "summary": "When a connection fails and the wire is immediately accused of lacking professional development.",
+  "part_of_speech": "noun",
+  "tags": ["electronics", "debugging", "blame", "pudied"],
+  "definition": "A condition in which an electrical connection fails, but instead of investigating the contact resistance, the engineer assigns blame to the wire's competence.",
+  "root_cause": "Probably the connection. Definitely the wire's fault. 😭😭😭",
+  "related_terms": ["Dog Cycle", "DPO", "Cello Tape Engineering"],
+  "origin": "The Department of Premature Electrical Judgment",
+  "examples": ["The LED still refuses to turn on. Classic wire skill issue."],
+  "related_articles": ["dog-cycle", "cello-tape-laminate"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

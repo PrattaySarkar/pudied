@@ -19,6 +19,8 @@ class Article(BaseModel):
     origin: str | None = None
     examples: list[str] = Field(default_factory=list)
     related_articles: list[str] = Field(default_factory=list)
+    related_terms: list[str] = Field(default_factory=list)
+    root_cause: str | None = None
     created_at: date | None = None
     updated_at: date | None = None
 
