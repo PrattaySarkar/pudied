@@ -47,6 +47,11 @@ def home(request: Request):
     return render("home.html", request, recent=recent, errors=result.errors)
 
 
+@app.get("/about", response_class=HTMLResponse)
+def about_page(request: Request):
+    return render("about.html", request)
+
+
 @app.get("/article/{article_id}", response_class=HTMLResponse)
 def article_page(request: Request, article_id: str):
     result = scanner.get()
