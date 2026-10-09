@@ -1,0 +1,19 @@
+{
+  "id": "destructive-time-optimization",
+  "title": "Destructive Time Optimization™",
+  "aliases": ["Cut First, Think Later", "Component Sacrifice"],
+  "summary": "Saving time now by spending the future's component budget.",
+  "part_of_speech": "noun",
+  "tags": ["electronics", "time-management", "improvisation", "pudied"],
+  "definition": "The engineering philosophy of sacrificing potentially useful components to save time in the present, with complete disregard for the possibility that they might be useful later.",
+  "examples": ["We cut the female Dupont wires instead of exploring alternative connection methods because cutting them took less time."],
+  "core_principle": "Cutting wires > free time.",
+  "known_side_effects": "Future regret, reduced component availability, and a disappointed engineering partner.",
+  "related_terms": ["Wire Skill Issue™", "Cello Tape Engineering", "Dog Process Outsourcing (DPO)"],
+  "origin": "A disagreement over whether female Dupont wires should have been cut before exploring other options.",
+  "philosophical_justification": "Why preserve a component for an uncertain future when you can eliminate the problem immediately?",
+  "warning": "Time saved is temporary. The consequences may persist until the next component order arrives.",
+  "related_articles": ["wire-skill-issue", "cello-tape-laminate", "dog-cycle"],
+  "created_at": "2026-10-09",
+  "updated_at": "2026-10-09"
+}

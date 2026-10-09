@@ -21,6 +21,10 @@ class Article(BaseModel):
     related_articles: list[str] = Field(default_factory=list)
     related_terms: list[str] = Field(default_factory=list)
     root_cause: str | None = None
+    core_principle: str | None = None
+    known_side_effects: str | None = None
+    philosophical_justification: str | None = None
+    warning: str | None = None
     created_at: date | None = None
     updated_at: date | None = None
 
