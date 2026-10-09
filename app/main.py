@@ -1,11 +1,12 @@
 from __future__ import annotations
 
 import os
+import random
 from pathlib import Path
 from urllib.parse import quote
 
 from fastapi import FastAPI, HTTPException, Query, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 from .renderer import create_templates
@@ -21,7 +22,13 @@ app.mount("/static", StaticFiles(directory=str(BASE_DIR / "app" / "static")), na
 
 
 def context(request: Request, **values: object) -> dict[str, object]:
-    return {"request": request, "tree": scanner.tree(), **values}
+    path = request.url.path.strip("/").split("/")
+    current_article_id = path[1] if len(path) == 2 and path[0] == "article" else None
+    current_category = tuple(path[1:]) if path and path[0] == "category" else ()
+    if current_article_id:
+        record = scanner.get().records.get(current_article_id)
+        current_category = record.category_path if record else ()
+    return {"request": request, "tree": scanner.tree(), "current_category": current_category, "current_article_id": current_article_id, **values}
 
 
 def render(template_name: str, request: Request, status_code: int = 200, **values: object):
@@ -78,6 +85,14 @@ def search_page(request: Request, q: str = Query(default="")):
 @app.get("/index", response_class=HTMLResponse)
 def index_page(request: Request):
     return render("index.html", request, records=scanner.get().articles)
+
+
+@app.get("/surprise")
+def surprise():
+    records = scanner.get().articles
+    if not records:
+        return RedirectResponse(url="/index", status_code=303)
+    return RedirectResponse(url=f"/article/{random.choice(records).article.id}", status_code=303)
 
 
 @app.get("/api/tree")
